@@ -353,7 +353,7 @@ UsedLibrary="/Applications/EAGLE-8.2.0/lbr/recom-powerline-acdc-converters.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="332 221 1531 820"
+Loc="91 53 1599 943"
 State=2
 Number=0
 
