@@ -606,28 +606,28 @@ The RAC01-SC and RAC02-SC series are ultra-compact universal input AC/DC power m
 <library name="Zettler">
 <packages>
 <package name="AZ9571">
-<pad name="_" x="-5.08" y="2.54" drill="0.6" shape="square"/>
-<pad name="1" x="-5.08" y="-2.54" drill="0.6" shape="square"/>
-<pad name="9" x="-2.54" y="-2.54" drill="0.6" shape="square"/>
-<pad name="2" x="-2.54" y="2.54" drill="0.6" shape="square"/>
-<pad name="6" x="5.08" y="2.54" drill="0.6" shape="square"/>
-<pad name="5" x="5.08" y="-2.54" drill="0.6" shape="square"/>
+<pad name="_" x="-5.08" y="2.54" drill="0.6"/>
+<pad name="1" x="-5.08" y="-2.54" drill="0.6"/>
+<pad name="9" x="-2.54" y="-2.54" drill="0.6"/>
+<pad name="2" x="-2.54" y="2.54" drill="0.6"/>
+<pad name="6" x="5.08" y="2.54" drill="0.6"/>
+<pad name="5" x="5.08" y="-2.54" drill="0.6"/>
 <rectangle x1="-6.35" y1="-3.81" x2="6.35" y2="3.81" layer="40"/>
 <text x="-6.223" y="4.191" size="0.8128" layer="21">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
 <symbol name="AZ9571">
-<pin name="6" x="10.16" y="-5.08" length="middle" rot="R180"/>
-<pin name="5" x="-10.16" y="-5.08" length="middle"/>
-<pin name="2" x="10.16" y="2.54" length="middle" rot="R180"/>
-<pin name="_" x="10.16" y="5.08" length="middle" rot="R180"/>
-<pin name="1" x="-10.16" y="5.08" length="middle"/>
-<pin name="9" x="-10.16" y="2.54" length="middle"/>
-<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<pin name="6" x="12.7" y="-5.08" length="middle" rot="R180"/>
+<pin name="5" x="-12.7" y="-5.08" length="middle"/>
+<pin name="2" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="_" x="12.7" y="5.08" length="middle" rot="R180"/>
+<pin name="1" x="-12.7" y="5.08" length="middle"/>
+<pin name="GND@9" x="-12.7" y="2.54" length="middle" direction="pwr"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -642,7 +642,7 @@ The RAC01-SC and RAC02-SC series are ultra-compact universal input AC/DC power m
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="5" pad="5"/>
 <connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="9" pad="9"/>
+<connect gate="G$1" pin="GND@9" pad="9"/>
 <connect gate="G$1" pin="_" pad="_"/>
 </connects>
 <technologies>
@@ -822,7 +822,8 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.6096" drill="0.6096">
+<clearance class="0" value="0.6096"/>
 </class>
 </classes>
 <parts>
@@ -840,7 +841,7 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <instances>
 <instance part="CORE" gate="G$1" x="104.14" y="68.58"/>
 <instance part="PWR1" gate="_MODULE" x="50.8" y="78.74"/>
-<instance part="RELAY1" gate="G$1" x="142.24" y="83.82"/>
+<instance part="RELAY1" gate="G$1" x="139.7" y="83.82"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="X1" gate="-1" x="22.86" y="81.28" rot="R180"/>
 <instance part="X1" gate="-2" x="22.86" y="76.2" rot="R180"/>
@@ -879,16 +880,6 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <label x="71.12" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GND" class="0">
-<segment>
-<pinref part="PWR1" gate="_MODULE" pin="VOUT-"/>
-<wire x1="68.58" y1="73.66" x2="83.82" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="73.66" x2="83.82" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="CORE" gate="G$1" pin="GND@2"/>
-<wire x1="83.82" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
-<label x="71.12" y="73.66" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="LOAD+" class="0">
 <segment>
 <pinref part="RELAY1" gate="G$1" pin="6"/>
@@ -903,20 +894,10 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <wire x1="162.56" y1="86.36" x2="157.48" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="86.36" x2="157.48" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="RELAY1" gate="G$1" pin="1"/>
-<wire x1="157.48" y1="93.98" x2="132.08" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="93.98" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="93.98" x2="127" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="127" y1="93.98" x2="127" y2="88.9" width="0.1524" layer="91"/>
 <label x="139.7" y="93.98" size="1.778" layer="95"/>
 <pinref part="X2" gate="-1" pin="KL"/>
-</segment>
-</net>
-<net name="GND2" class="0">
-<segment>
-<pinref part="RELAY1" gate="G$1" pin="9"/>
-<wire x1="132.08" y1="86.36" x2="124.46" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="86.36" x2="124.46" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="CORE" gate="G$1" pin="GND@21"/>
-<wire x1="124.46" y1="81.28" x2="121.92" y2="81.28" width="0.1524" layer="91"/>
-<label x="124.46" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWITCH" class="0">
@@ -929,6 +910,15 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <pinref part="RELAY1" gate="G$1" pin="2"/>
 <wire x1="154.94" y1="86.36" x2="152.4" y2="86.36" width="0.1524" layer="91"/>
 <label x="142.24" y="71.12" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="PWR1" gate="_MODULE" pin="VOUT-"/>
+<wire x1="68.58" y1="73.66" x2="83.82" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="73.66" x2="83.82" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="CORE" gate="G$1" pin="GND@2"/>
+<wire x1="83.82" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
