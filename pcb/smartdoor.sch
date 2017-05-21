@@ -825,6 +825,9 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <class number="0" name="default" width="0.6096" drill="0.6096">
 <clearance class="0" value="0.6096"/>
 </class>
+<class number="1" name="hivoltage" width="1.016" drill="0.6096">
+<clearance class="1" value="1.016"/>
+</class>
 </classes>
 <parts>
 <part name="CORE" library="Particle" deviceset="SPARK_CORE" device="CORE"/>
@@ -851,7 +854,7 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <busses>
 </busses>
 <nets>
-<net name="N" class="0">
+<net name="N" class="1">
 <segment>
 <pinref part="PWR1" gate="_MODULE" pin="VACIN(N)"/>
 <wire x1="33.02" y1="73.66" x2="25.4" y2="73.66" width="0.1524" layer="91"/>
@@ -860,7 +863,7 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <wire x1="25.4" y1="76.2" x2="25.4" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="L" class="0">
+<net name="L" class="1">
 <segment>
 <pinref part="PWR1" gate="_MODULE" pin="VACIN(L)"/>
 <wire x1="25.4" y1="81.28" x2="33.02" y2="81.28" width="0.1524" layer="91"/>
