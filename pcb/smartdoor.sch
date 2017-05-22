@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.0">
+<eagle version="8.2.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -503,7 +503,7 @@ The RAC01-SC and RAC02-SC series are ultra-compact universal input AC/DC power m
 <pin name="VACIN(L)" x="-17.78" y="5.08" length="middle" direction="pwr"/>
 <pin name="VACIN(N)" x="-17.78" y="-5.08" length="middle" direction="pwr"/>
 <pin name="VOUT+" x="17.78" y="5.08" length="middle" direction="pwr" rot="R180"/>
-<pin name="VOUT-" x="17.78" y="-5.08" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND" x="17.78" y="-5.08" length="middle" direction="pwr" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -519,10 +519,10 @@ The RAC01-SC and RAC02-SC series are ultra-compact universal input AC/DC power m
 <devices>
 <device name="" package="LOW_PROFILE_POWER_MODULE">
 <connects>
+<connect gate="_MODULE" pin="GND" pad="P3"/>
 <connect gate="_MODULE" pin="VACIN(L)" pad="P2"/>
 <connect gate="_MODULE" pin="VACIN(N)" pad="P1"/>
 <connect gate="_MODULE" pin="VOUT+" pad="P4"/>
-<connect gate="_MODULE" pin="VOUT-" pad="P3"/>
 </connects>
 <technologies>
 <technology name="01-05">
@@ -606,12 +606,12 @@ The RAC01-SC and RAC02-SC series are ultra-compact universal input AC/DC power m
 <library name="Zettler">
 <packages>
 <package name="AZ9571">
-<pad name="_" x="-5.08" y="2.54" drill="0.6"/>
-<pad name="1" x="-5.08" y="-2.54" drill="0.6"/>
-<pad name="9" x="-2.54" y="-2.54" drill="0.6"/>
-<pad name="2" x="-2.54" y="2.54" drill="0.6"/>
-<pad name="6" x="5.08" y="2.54" drill="0.6"/>
-<pad name="5" x="5.08" y="-2.54" drill="0.6"/>
+<pad name="_" x="-5.08" y="2.54" drill="0.7" diameter="1.778"/>
+<pad name="1" x="-5.08" y="-2.54" drill="0.7" diameter="1.778"/>
+<pad name="9" x="-2.54" y="-2.54" drill="0.7" diameter="1.778"/>
+<pad name="2" x="-2.54" y="2.54" drill="0.7" diameter="1.778"/>
+<pad name="6" x="5.08" y="2.54" drill="0.7" diameter="1.778"/>
+<pad name="5" x="5.08" y="-2.54" drill="0.7" diameter="1.778"/>
 <rectangle x1="-6.35" y1="-3.81" x2="6.35" y2="3.81" layer="40"/>
 <text x="-6.223" y="4.191" size="0.8128" layer="21">&gt;NAME</text>
 </package>
@@ -913,15 +913,6 @@ Source: http://eshop.phoenixcontact.com .. 1729128.pdf</description>
 <pinref part="RELAY1" gate="G$1" pin="2"/>
 <wire x1="154.94" y1="86.36" x2="152.4" y2="86.36" width="0.1524" layer="91"/>
 <label x="142.24" y="71.12" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="PWR1" gate="_MODULE" pin="VOUT-"/>
-<wire x1="68.58" y1="73.66" x2="83.82" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="73.66" x2="83.82" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="CORE" gate="G$1" pin="GND@2"/>
-<wire x1="83.82" y1="91.44" x2="86.36" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
