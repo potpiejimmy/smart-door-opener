@@ -58,23 +58,23 @@
 <library>
 <packages>
 <package name="AZ9571">
-<pad name="_" x="-5.08" y="2.54" drill="0.7" diameter="1.778"/>
-<pad name="1" x="-5.08" y="-2.54" drill="0.7" diameter="1.778"/>
+<pad name="1" x="-5.08" y="2.54" drill="0.7" diameter="1.778"/>
+<pad name="10" x="-5.08" y="-2.54" drill="0.7" diameter="1.778"/>
 <pad name="9" x="-2.54" y="-2.54" drill="0.7" diameter="1.778"/>
 <pad name="2" x="-2.54" y="2.54" drill="0.7" diameter="1.778"/>
-<pad name="6" x="5.08" y="2.54" drill="0.7" diameter="1.778"/>
-<pad name="5" x="5.08" y="-2.54" drill="0.7" diameter="1.778"/>
+<pad name="5" x="5.08" y="2.54" drill="0.7" diameter="1.778"/>
+<pad name="6" x="5.08" y="-2.54" drill="0.7" diameter="1.778"/>
 <rectangle x1="-6.35" y1="-3.81" x2="6.35" y2="3.81" layer="40"/>
 <text x="-6.223" y="4.191" size="0.8128" layer="21">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
 <symbol name="AZ9571">
-<pin name="6" x="12.7" y="-5.08" length="middle" rot="R180"/>
-<pin name="5" x="-12.7" y="-5.08" length="middle"/>
+<pin name="5" x="12.7" y="-5.08" length="middle" rot="R180"/>
+<pin name="6" x="-12.7" y="-5.08" length="middle"/>
 <pin name="2" x="12.7" y="2.54" length="middle" rot="R180"/>
-<pin name="_" x="12.7" y="5.08" length="middle" rot="R180"/>
-<pin name="1" x="-12.7" y="5.08" length="middle"/>
+<pin name="1" x="12.7" y="5.08" length="middle" rot="R180"/>
+<pin name="10" x="-12.7" y="5.08" length="middle"/>
 <pin name="GND@9" x="-12.7" y="2.54" length="middle" direction="pwr"/>
 <wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
@@ -91,11 +91,11 @@
 <device name="AZ9571" package="AZ9571">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="5" pad="5"/>
 <connect gate="G$1" pin="6" pad="6"/>
 <connect gate="G$1" pin="GND@9" pad="9"/>
-<connect gate="G$1" pin="_" pad="_"/>
 </connects>
 <technologies>
 <technology name=""/>
