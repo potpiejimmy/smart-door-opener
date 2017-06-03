@@ -1,0 +1,27 @@
+{
+  "name": "alexa-skill-smart-door-opener",
+  "version": "1.0.0",
+  "description": "Open the door",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/potpiejimmy/smart-door-opener.git"
+  },
+  "keywords": [
+    "door",
+    "alexa"
+  ],
+  "author": "Thorsten Liese",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/potpiejimmy/smart-door-opener/issues"
+  },
+  "homepage": "https://github.com/potpiejimmy/smart-door-opener#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.9",
+    "node-fetch": "^1.6.3"
+  }
+}
