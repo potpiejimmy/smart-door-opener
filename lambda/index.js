@@ -12,7 +12,7 @@ exports.handler = function(event, context, callback){
 
 var handlers = {
     "LaunchRequest": function() {
-        invokeBackend.call(this, BACKEND_URL+process.env.DEVICE_ID+"/buzz?access_token="+process.env.ACCESS_TOKEN).then(body => {
+        invokeBackend.call(this, BACKEND_URL+process.env.DEVICE_ID+"/buzz?access_token="+process.env.ACCESS_TOKEN, {method: 'POST'}).then(body => {
             if (body.return_value) {
                 this.emit(':tell', "Haustür geöffnet.");
             } else {
